@@ -1,0 +1,174 @@
+<Schema name="CDN &#27969;&#37327;&#22577;&#34920;">
+  <Dimension visible="true" highCardinality="false" name="&#26381;&#21209;&#31278;&#39006;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#26381;&#21209;&#31278;&#39006;" visible="true" column="category_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="&#26381;&#21209;&#21517;&#31281;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#26381;&#21209;&#21517;&#31281;" visible="true" column="category_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Content id">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="Content id" visible="true" column="content_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="&#24433;&#29255;&#21517;&#31281;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#24433;&#29255;&#21517;&#31281;" visible="true" column="content_title" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="&#24433;&#29255;&#31278;&#39006;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#24433;&#29255;&#31278;&#39006;" visible="true" column="content_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="&#38598;&#25976;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#38598;&#25976;" visible="true" column="episode_no" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="&#26085;&#26399;" description="DAY">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#26085;&#26399;" visible="true" column="p_day" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="&#26376;&#20221;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#26376;&#20221;" visible="true" column="p_month" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="&#24180;&#24230;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#24180;&#24230;" visible="true" column="p_year" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Program id">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="Program id" visible="true" column="program_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Program name">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="Program name" visible="true" column="program_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Program type">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="Program type" visible="true" column="program_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="&#20379;&#25033;&#21830;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#20379;&#25033;&#21830;" visible="true" column="provider" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="CDN&#26381;&#21209;&#21517;&#31281;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="CDN&#26381;&#21209;&#21517;&#31281;" visible="true" column="service_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="&#35336;&#36027;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#35336;&#36027;" visible="true" column="free" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#25773;&#25918;&#26085;&#26399;">
+    <Hierarchy name="&#25773;&#25918;&#26085;&#26399;" visible="true" hasAll="true">
+      <Table name="ans_cdn_daily_report" schema="sys">
+      </Table>
+      <Level name="&#25773;&#25918;&#26085;&#26399;" visible="true" column="p_date" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="CDN &#27969;&#37327;&#22577;&#34920;" visible="true" cache="true" enabled="false">
+    <Table name="ans_cdn_daily_report" schema="sys">
+    </Table>
+    <DimensionUsage source="&#26381;&#21209;&#31278;&#39006;" name="&#26381;&#21209;&#31278;&#39006;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26381;&#21209;&#21517;&#31281;" name="&#26381;&#21209;&#21517;&#31281;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Content id" name="Content id" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24433;&#29255;&#21517;&#31281;" name="&#24433;&#29255;&#21517;&#31281;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24433;&#29255;&#31278;&#39006;" name="&#24433;&#29255;&#31278;&#39006;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#38598;&#25976;" name="&#38598;&#25976;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26085;&#26399;" name="&#26085;&#26399;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26376;&#20221;" name="&#26376;&#20221;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24180;&#24230;" name="&#24180;&#24230;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Program id" name="Program id" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Program name" name="Program name" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Program type" name="Program type" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#20379;&#25033;&#21830;" name="&#20379;&#25033;&#21830;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="CDN&#26381;&#21209;&#21517;&#31281;" name="CDN&#26381;&#21209;&#21517;&#31281;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#35336;&#36027;" name="&#35336;&#36027;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="&#25773;&#25918;&#27425;&#25976;" column="access_count" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="&#24179;&#22343;&#26178;&#38291;" column="avg_watch_time" formatString="#,###.00;(#,###.00)" aggregator="avg">
+    </Measure>
+    <Measure name="Bitrate max" column="bitrate_max" formatString="#" aggregator="sum">
+    </Measure>
+    <Measure name="&#35264;&#30475;&#26178;&#38291;(&#20998;)" column="total_watch_time" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="&#35264;&#30475;&#26178;&#38291;(&#23567;&#26178;)" column="total_watch_time_hours" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+  </Cube>
+</Schema>

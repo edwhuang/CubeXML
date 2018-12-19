@@ -1,0 +1,89 @@
+<Schema name="&#x6bcf;&#x6708;&#x8a02;&#x55ae;&#x5206;&#x6790;">
+  <Dimension name="&#x51fa;&#x751f;&#x5e74;">
+    <Hierarchy hasAll="true" primaryKey="BIRTHYEAR">
+      <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO"/>
+      <Level name="&#x51fa;&#x751f;&#x5e74;" uniqueMembers="false" column="BIRTHYEAR" type="Numeric">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="&#x6708;&#x4efd;">
+    <Hierarchy hasAll="true" primaryKey="BIRTHYEAR">
+      <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO"/>
+      <Level name="&#x6708;&#x4efd;" uniqueMembers="false" column="P_MONTHS" type="Numeric">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="&#x5e74;&#x5ea6;">
+    <Hierarchy hasAll="true" primaryKey="BIRTHYEAR">
+      <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO"/>
+      <Level name="&#x5e74;&#x5ea6;" uniqueMembers="false" column="P_YEAR" type="Numeric">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="&#x5e74;&#x6708;">
+    <Hierarchy hasAll="true" primaryKey="BIRTHYEAR">
+      <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO"/>
+      <Level name="&#x5e74;&#x6708;" uniqueMembers="false" column="P_YYYY_MM" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="&#x670d;&#x52d9;&#x540d;&#x7a31;">
+    <Hierarchy name="P服務名稱" hasAll="true" primaryKey="BIRTHYEAR">
+      <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO"/>
+      <Level name="&#x670d;&#x52d9;&#x540d;&#x7a31;" uniqueMembers="false" column="PACKAGE_CAT1" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="&#x65b9;&#x6848;&#x4ee3;&#x865f;">
+    <Hierarchy hasAll="true" primaryKey="BIRTHYEAR">
+      <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO"/>
+      <Level name="&#x65b9;&#x6848;&#x4ee3;&#x865f;" uniqueMembers="false" column="PACKAGE_ID" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="&#x4ed8;&#x6b3e;&#x65b9;&#x5f0f;">
+    <Hierarchy hasAll="true" primaryKey="BIRTHYEAR">
+      <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO"/>
+      <Level name="&#x4ed8;&#x6b3e;&#x65b9;&#x5f0f;" uniqueMembers="false" column="PAY_TYPE" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="&#x5faa;&#x74b0;&#x6263;&#x6b3e;">
+    <Hierarchy hasAll="true" primaryKey="BIRTHYEAR">
+      <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO"/>
+      <Level name="&#x5faa;&#x74b0;&#x6263;&#x6b3e;" uniqueMembers="false" column="RECURRENT" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="&#x6027;&#x5225;">
+    <Hierarchy hasAll="true" primaryKey="BIRTHYEAR">
+      <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO"/>
+      <Level name="&#x6027;&#x5225;" uniqueMembers="false" column="SEX" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="&#x5e74;&#x9f61;">
+    <Hierarchy hasAll="true" primaryKey="BIRTHYEAR">
+      <Table name="ANS_BIRTHYEAR_RANG" schema="PENTAHO"/>
+      <Level name="&#x5e74;&#x9f61;" uniqueMembers="false" column="RANG" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="&#x6bcf;&#x6708;&#x8a02;&#x55ae;&#x5206;&#x6790;">
+    <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO"/>
+    <DimensionUsage name="&#x51fa;&#x751f;&#x5e74;" source="&#x51fa;&#x751f;&#x5e74;" foreignKey="BIRTHYEAR"/>
+    <DimensionUsage name="&#x6708;&#x4efd;" source="&#x6708;&#x4efd;" foreignKey="BIRTHYEAR"/>
+    <DimensionUsage name="&#x5e74;&#x5ea6;" source="&#x5e74;&#x5ea6;" foreignKey="BIRTHYEAR"/>
+    <DimensionUsage name="&#x5e74;&#x6708;" source="&#x5e74;&#x6708;" foreignKey="BIRTHYEAR"/>
+    <DimensionUsage name="&#x670d;&#x52d9;&#x540d;&#x7a31;" source="&#x670d;&#x52d9;&#x540d;&#x7a31;" foreignKey="BIRTHYEAR"/>
+    <DimensionUsage name="&#x65b9;&#x6848;&#x4ee3;&#x865f;" source="&#x65b9;&#x6848;&#x4ee3;&#x865f;" foreignKey="BIRTHYEAR"/>
+    <DimensionUsage name="&#x4ed8;&#x6b3e;&#x65b9;&#x5f0f;" source="&#x4ed8;&#x6b3e;&#x65b9;&#x5f0f;" foreignKey="BIRTHYEAR"/>
+    <DimensionUsage name="&#x5faa;&#x74b0;&#x6263;&#x6b3e;" source="&#x5faa;&#x74b0;&#x6263;&#x6b3e;" foreignKey="BIRTHYEAR"/>
+    <DimensionUsage name="&#x6027;&#x5225;" source="&#x6027;&#x5225;" foreignKey="BIRTHYEAR"/>
+    <DimensionUsage name="&#x5e74;&#x9f61;" source="&#x5e74;&#x9f61;" foreignKey="BIRTHYEAR"/>
+    <Measure name="&#x5ba2;&#x6236;&#x6578;" column="CLIENTS" aggregator="distinct count" formatString="Standard"/>
+    <Measure name="&#x8a02;&#x55ae;&#x6578;" column="PURCHASE_IDS" aggregator="distinct count" formatString="&#x23;,&#x23;&#x23;&#x23;&#x3b;&#x28;&#x23;,&#x23;&#x23;&#x23;&#x29;"/>
+    <Measure name="&#x65b0;&#x589e;&#x8a02;&#x55ae;&#x6578;" column="START_PURCHASE_IDS" aggregator="distinct count" formatString="&#x23;,&#x23;&#x23;&#x23;&#x3b;&#x28;&#x23;,&#x23;&#x23;&#x23;&#x29;"/>
+    <Measure name="&#x5230;&#x671f;&#x8a02;&#x55ae;&#x6578;" column="END_PURCHASE_IDS" aggregator="distinct count" formatString="&#x23;,&#x23;&#x23;&#x23;&#x3b;&#x28;&#x23;,&#x23;&#x23;&#x23;&#x29;"/>
+  </Cube>
+</Schema>

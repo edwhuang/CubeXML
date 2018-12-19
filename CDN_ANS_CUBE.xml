@@ -1,0 +1,655 @@
+<Schema name="CDN &#27969;&#37327;&#22577;&#34920;_WH">
+  <Dimension visible="true" highCardinality="false" name="&#24433;&#29255;">
+    <Hierarchy name="&#24433;&#29255;" visible="true" hasAll="true" primaryKey="PROGRAM_ID">
+      <Table name="CONTENT_META" schema="IPTV">
+      </Table>
+      <Level name="&#24433;&#29255;&#31278;&#39006;" visible="true" column="CONTENT_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#24433;&#29255;&#21517;&#31281;" visible="true" column="TITLE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#38598;" visible="true" column="EPISODE_NO" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Program Id" visible="true" column="PROGRAM_ID" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#38598;&#25976;" visible="true" hasAll="true" primaryKey="PROGRAM_ID">
+      <Table name="CONTENT_META" schema="IPTV">
+      </Table>
+      <Level name="&#38598;" visible="true" column="EPISODE_NO" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#20379;&#25033;&#21830;" visible="true" hasAll="true" primaryKey="PROGRAM_ID">
+      <Table name="CONTENT_META" schema="IPTV">
+      </Table>
+      <Level name="&#20379;&#25033;&#21830;" visible="true" column="PROVIDER" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#22283;&#21029;" visible="true" hasAll="true" primaryKey="PROGRAM_ID">
+      <Table name="CONTENT_META" schema="IPTV">
+      </Table>
+      <Level name="&#22283;&#21029;" visible="true" column="COUNTRY_CODE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#24433;&#29255;&#20998;&#39006;&#19968;" visible="true" hasAll="true" primaryKey="PROGRAM_ID">
+      <Table name="CONTENT_META" schema="IPTV">
+      </Table>
+      <Level name="&#24433;&#29255;&#20998;&#39006;&#19968;" visible="true" column="ANS_CODE1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#30701;&#24433;&#29255;" visible="true" hasAll="true" primaryKey="PROGRAM_ID">
+      <Table name="CONTENT_META" schema="IPTV">
+      </Table>
+      <Level name="&#30701;&#24433;&#29255;" visible="true" column="SHORT_VIDEO" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Program id">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ANS_CDN_DAILY_REPORT" schema="PENTAHO">
+      </Table>
+      <Level name="Program id" visible="true" column="PROGRAM_ID" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Program name">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ANS_CDN_DAILY_REPORT" schema="PENTAHO">
+      </Table>
+      <Level name="Program name" visible="true" column="PROGRAM_NAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Program type">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ANS_CDN_DAILY_REPORT" schema="PENTAHO">
+      </Table>
+      <Level name="Program type" visible="true" column="PROGRAM_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="&#20379;&#25033;&#21830;">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="ANS_CDN_DAILY_REPORT" schema="PENTAHO">
+      </Table>
+      <Level name="&#20379;&#25033;&#21830;" visible="true" column="PROVIDER" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="&#26178;&#38291;">
+    <Hierarchy name="&#26085;&#26399;" visible="true" hasAll="true" primaryKey="P_DATE_S">
+      <Table name="CALENDER" schema="PENTAHO">
+      </Table>
+      <Level name="&#26085;&#26399;" visible="true" column="P_DATE_S" type="String" uniqueMembers="true" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#24180;&#24230;" visible="true" hasAll="true" primaryKey="P_DATE_S">
+      <Table name="CALENDER" schema="PENTAHO">
+      </Table>
+      <Level name="&#24180;&#24230;" visible="true" column="P_YEAR" type="String" uniqueMembers="true" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#26376;&#20221;" visible="true" hasAll="true" primaryKey="P_DATE_S">
+      <Table name="CALENDER" schema="PENTAHO">
+      </Table>
+      <Level name="&#26376;&#20221;" visible="true" column="P_MONTH" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#24180;&#26376;&#26085;" visible="true" hasAll="true" primaryKey="P_DATE_S">
+      <Table name="CALENDER">
+      </Table>
+      <Level name="&#24180;&#24230;" visible="true" column="P_YEAR" type="String" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+      <Level name="&#26376;&#20221;" visible="true" column="P_YYYYMM" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+      <Level name="&#26085;" visible="true" column="P_DATE_S" type="String" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#36913;" visible="true" hasAll="true" primaryKey="P_DATE_S">
+      <Table name="CALENDER">
+      </Table>
+      <Level name="&#36913;&#21029;" visible="true" column="WEEK_FOR_YEAR" type="String" uniqueMembers="false" levelType="TimeWeeks" hideMemberIf="Never">
+      </Level>
+      <Level name="&#36913;&#36215;&#36804;" visible="true" column="WEEK_DATE" type="String" uniqueMembers="false" levelType="TimeWeeks" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#26085;&#26399;&#26684;&#24335;&#20108;" visible="true" hasAll="true" primaryKey="P_DATE_S">
+      <Table name="CALENDER" schema="PENTAHO">
+      </Table>
+      <Level name="&#26085;&#26399;&#26684;&#24335;&#20108;" visible="true" column="P_DATE_S2" type="String" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#25892;&#20998;&#26041;&#24335;">
+    <Hierarchy name="&#25892;&#20998;&#26041;&#24335;" visible="true" hasAll="true">
+      <Table name="ANS_CDN_DAILY_REPORT" schema="PENTAHO">
+      </Table>
+      <Level name="&#26041;&#24335;" visible="true" column="CAL_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#26550;&#19978;">
+    <Hierarchy name="&#26550;&#19978;" visible="true" hasAll="true">
+      <Table name="ANS_CDN_DAILY_REPORT" schema="PENTAHO">
+      </Table>
+      <Level name="&#26550;&#19978;" visible="true" column="ACTIVATE_FLG" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Platform">
+    <Hierarchy name="Platform" visible="true" hasAll="true" primaryKey="PLATFORM">
+      <Table name="ANS_PLATFORM_MAS" schema="PENTAHO">
+      </Table>
+      <Level name="Platform" visible="true" column="PLATFORM_DESC" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#24291;&#21578;">
+    <Hierarchy name="&#23560;&#26696;" visible="true" hasAll="true" primaryKey="AD_CLIP">
+      <Table name="AD_CLIP_MAP" schema="IPTV">
+      </Table>
+      <Level name="&#23560;&#26696;" visible="true" column="PROJECT" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#20301;&#32622;" visible="true" hasAll="true" primaryKey="AD_CLIP">
+      <Table name="AD_CLIP_MAP" schema="IPTV">
+      </Table>
+      <Level name="&#20301;&#32622;" visible="true" column="POSITION" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#24291;&#21578;ID" visible="true" hasAll="true" primaryKey="AD_CLIP">
+      <Table name="AD_CLIP_MAP" schema="IPTV">
+      </Table>
+      <Level name="&#35498;&#26126;" visible="true" column="DES" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="AD_Clip" visible="true" column="AD_CLIP" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#20998;&#26512;&#20998;&#39006;" visible="true" hasAll="true" primaryKey="AD_CLIP">
+      <Table name="AD_CLIP_MAP" schema="IPTV">
+      </Table>
+      <Level name="&#20998;&#26512;&#30908;1" visible="true" column="ANS_CODE1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#20998;&#26512;">
+    <Hierarchy name="&#20998;&#39006;&#19968;" visible="true" hasAll="true">
+      <Table name="ANS_ANS_CODE1" schema="PENTAHO">
+      </Table>
+      <Level name="&#20998;&#39006;&#19968;" visible="true" column="ANS_CODE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#24433;&#29255;&#21517;&#31281;byTitle">
+    <Hierarchy name="&#24433;&#29255;&#21517;&#31281;" visible="true" hasAll="true" primaryKey="CONTENT_TITLE">
+      <Table name="CONTENT_META" schema="IPTV">
+      </Table>
+      <Level name="&#24433;&#29255;&#21517;&#31281;" visible="true" column="TITLE" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="CDN&#26381;&#21209;&#21517;&#31281;">
+    <Hierarchy name="CDN&#26381;&#21209;&#21517;&#31281;" visible="true" hasAll="true" primaryKey="SERVICE_NAME">
+      <Table name="ANS_CDN_SERVICE_NAME2" schema="PENTAHO">
+      </Table>
+      <Level name="&#26381;&#21209;&#31278;&#39006;" visible="true" column="SERVICE_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Platform" visible="true" column="PLATFORM" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#35336;&#36027;" visible="true" column="CAL_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="CDN&#26381;&#21209;&#21517;&#31281;" visible="true" column="SERVICE_NAME" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#35336;&#36027;" visible="true" hasAll="true" primaryKey="SERVICE_NAME">
+      <Table name="ANS_CDN_SERVICE_NAME2">
+      </Table>
+      <Level name="&#35336;&#36027;" visible="true" column="CAL_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#24291;&#21578;" visible="true" hasAll="true" primaryKey="SERVICE_NAME">
+      <Table name="ANS_CDN_SERVICE_NAME2">
+      </Table>
+      <Level name="&#24291;&#21578;" visible="true" column="INCLUDE_AD" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#27969;&#37327;">
+    <Hierarchy name="&#27969;&#37327;" visible="true" hasAll="true" primaryKey="PROGRAM_SIZE">
+      <Table name="ANS_PROGRAM_SIZE" schema="PENTAHO">
+      </Table>
+      <Level name="&#22823;&#23567;&#65323;&#25976;" visible="true" table="ANS_PROGRAM_SIZE" column="SIZE_DESC" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#24433;&#29255;&#31278;&#39006;">
+    <Hierarchy name="&#24433;&#29255;&#31278;&#39006;" visible="true" hasAll="true" primaryKey="CONTENT_TYPE">
+      <Table name="ANS_CONTENT_TYPE" schema="PENTAHO">
+      </Table>
+      <Level name="&#31278;&#39006;" visible="true" column="CONTETN_DESC" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="TOP20">
+    <Hierarchy name="TOP20" visible="true" hasAll="true">
+      <Table name="ANS_CDN_ANA_CODE" schema="PENTAHO">
+      </Table>
+      <Level name="TOP20" visible="true" column="DESCRIPTION" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="CDN &#27969;&#37327;&#22577;&#34920;" visible="true" cache="true" enabled="true">
+    <Table name="ANS_CDN_DAILY_REPORT" schema="PENTAHO">
+    </Table>
+    <DimensionUsage source="&#24433;&#29255;" name="&#24433;&#29255;" visible="true" foreignKey="PROGRAM_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26178;&#38291;" name="&#26178;&#38291;" visible="true" foreignKey="P_DATE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#25892;&#20998;&#26041;&#24335;" name="&#25892;&#20998;&#26041;&#24335;" visible="true" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#20998;&#26512;" name="&#20998;&#26512;" visible="false" foreignKey="CONTENT_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="CDN&#26381;&#21209;&#21517;&#31281;" name="CDN&#26381;&#21209;&#21517;&#31281;" visible="true" foreignKey="SERVICE_NAME" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#27969;&#37327;" name="EM&#27969;&#37327;&#22823;&#23567;" visible="true" foreignKey="PROGRAM_SIZE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#20998;&#26512;" name="&#24291;&#21578;" visible="true" foreignKey="CONTENT_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="ANA_CODE1" highCardinality="false" name="&#20998;&#39006;">
+      <Hierarchy name="TOP20" visible="true" hasAll="true" primaryKey="ANA_CODE1">
+        <Table name="ANS_CDN_ANA_CODE">
+        </Table>
+        <Level name="TOP20" visible="true" column="DESCRIPTION" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="SERVICE_NAME" highCardinality="false" name="Platform">
+      <Hierarchy name="Platform" visible="true" hasAll="true" primaryKey="SERVICE_NAME">
+        <Table name="ANS_CDN_SERVICE_NAME">
+        </Table>
+        <Level name="Platform" visible="true" column="PLATFORM" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="CDN_PROVIDER" highCardinality="false" name="CDN&#24288;&#21830;">
+      <Hierarchy name="CDN&#24288;&#21830;" visible="true" hasAll="true">
+        <InlineTable alias="CDN_Provider">
+          <ColumnDefs>
+            <ColumnDef name="CDN" type="String">
+            </ColumnDef>
+          </ColumnDefs>
+          <Rows>
+            <Row>
+              <Value column="CDN">
+                <![CDATA[HINET]]>
+              </Value>
+            </Row>
+            <Row>
+              <Value column="CDN">
+                <![CDATA[AWS]]>
+              </Value>
+            </Row>
+            <Row>
+              <Value column="CDN">
+                <![CDATA[AKA]]>
+              </Value>
+            </Row>
+          </Rows>
+        </InlineTable>
+        <Level name="CDN&#24288;&#21830;" visible="true" column="CDN" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="TOP20" name="TOP20" visible="true" foreignKey="ANA_CODE1" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="PROGRAM_ID" highCardinality="false" name="CO Headend Set">
+      <Hierarchy name="CDN Code" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="CDN Code" visible="true" column="HEADENDSTATIONID" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#38971;&#36947;&#21517;&#31281;" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="&#38971;&#36947;&#21517;&#31281;" visible="true" column="HEADENDSTATIONNAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#38971;&#36947;&#34399;&#30908;" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="&#38971;&#36947;&#34399;&#30908;" visible="true" column="TUNNG_CHANNEL" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#38971;&#36947;&#20998;&#39006;" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="&#38971;&#36947;&#20998;&#39006;" visible="true" column="CATEGORY_ZHTW" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="PLAYOUT_KEY" highCardinality="false" name="&#38971;&#36947;">
+      <Hierarchy name="&#38971;&#36947;&#21517;&#31281;" visible="true" hasAll="true" primaryKey="MAIN_KEY">
+        <Table name="ANS_CHANNEL_PLAYOUT">
+        </Table>
+        <Level name="&#38971;&#36947;&#21517;&#31281;" visible="true" column="CHANNEL_NAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#31680;&#30446;&#21517;&#31281;" visible="true" hasAll="true" primaryKey="MAIN_KEY">
+        <Table name="ANS_CHANNEL_PLAYOUT">
+        </Table>
+        <Level name="&#31680;&#30446;&#21517;&#31281;" visible="true" column="TITLE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Volume MB" column="VOLUME_MB" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="&#25773;&#25918;&#27425;&#25976;" column="ACCESS_COUNT" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="Bitrate max" column="BITRATE_MAX" formatString="#" aggregator="sum">
+    </Measure>
+    <Measure name="&#35264;&#30475;&#20998;&#37912;&#25976;" column="TOTAL_WATCH_TIME" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="&#35264;&#30475;&#26178;&#25976;" column="TOTAL_WATCH_TIME_HOURS" formatString="#,###.####;(#,###.####)" aggregator="sum">
+    </Measure>
+    <CalculatedMember name="&#24179;&#22343;&#26178;&#38291;" formatString="#,###.##;(#,###.##)" formula="[Measures].[&#35264;&#30475;&#20998;&#37912;&#25976;]/[Measures].[&#25773;&#25918;&#27425;&#25976;]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Volume GB" formatString="#,###.##GB;(#,###.##GB)" dimension="Measures" visible="true">
+      <Formula>
+        <![CDATA[[Measures].[Volume MB] / 1024]]>
+      </Formula>
+    </CalculatedMember>
+  </Cube>
+  <Cube name="CDN &#27969;&#37327;&#22577;&#34920;24H" visible="true" cache="true" enabled="true">
+    <Table name="ANS_CDN_HOUR_REPORT" schema="PENTAHO">
+    </Table>
+    <DimensionUsage source="&#24433;&#29255;" name="&#24433;&#29255;" visible="true" foreignKey="PROGRAM_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26178;&#38291;" name="&#26178;&#38291;" visible="true" foreignKey="P_DATE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#20998;&#26512;" name="&#20998;&#26512;" visible="false" foreignKey="CONTENT_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="CDN&#26381;&#21209;&#21517;&#31281;" name="CDN&#26381;&#21209;&#21517;&#31281;" visible="true" foreignKey="SERVICE_NAME" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#27969;&#37327;" name="EM&#27969;&#37327;&#22823;&#23567;" visible="true" foreignKey="PROGRAM_SIZE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#20998;&#26512;" name="&#24291;&#21578;" visible="true" foreignKey="CONTENT_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="ANA_CODE1" highCardinality="false" name="&#20998;&#39006;">
+      <Hierarchy name="TOP20" visible="true" hasAll="true" primaryKey="ANA_CODE1">
+        <Table name="ANS_CDN_ANA_CODE">
+        </Table>
+        <Level name="TOP20" visible="true" column="DESCRIPTION" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="SERVICE_NAME" highCardinality="false" name="Platform">
+      <Hierarchy name="Platform" visible="true" hasAll="true" primaryKey="SERVICE_NAME">
+        <Table name="ANS_CDN_SERVICE_NAME">
+        </Table>
+        <Level name="Platform" visible="true" column="PLATFORM" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="CDN_PROVIDER" highCardinality="false" name="CDN&#24288;&#21830;">
+      <Hierarchy name="CDN&#24288;&#21830;" visible="true" hasAll="true">
+        <Table name="ANS_CDN_HOUR_REPORT" schema="PENTAHO">
+        </Table>
+        <Level name="CDN&#24288;&#21830;" visible="true" column="CDN_PROVIDER" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="TOP20" name="TOP20" visible="true" foreignKey="ANA_CODE1" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="PROGRAM_ID" highCardinality="false" name="CO Headend Set">
+      <Hierarchy name="CDN Code" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="CDN Code" visible="true" column="HEADENDSTATIONID" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#38971;&#36947;&#21517;&#31281;" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="&#38971;&#36947;&#21517;&#31281;" visible="true" column="HEADENDSTATIONNAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#38971;&#36947;&#34399;&#30908;" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="&#38971;&#36947;&#34399;&#30908;" visible="true" column="TUNNG_CHANNEL" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#38971;&#36947;&#20998;&#39006;" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="&#38971;&#36947;&#20998;&#39006;" visible="true" column="CATEGORY_ZHTW" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="PLAYOUT_KEY" highCardinality="false" name="&#38971;&#36947;">
+      <Hierarchy name="&#38971;&#36947;&#21517;&#31281;" visible="true" hasAll="true" primaryKey="MAIN_KEY">
+        <Table name="ANS_CHANNEL_PLAYOUT">
+        </Table>
+        <Level name="&#38971;&#36947;&#21517;&#31281;" visible="true" column="CHANNEL_NAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#31680;&#30446;&#21517;&#31281;" visible="true" hasAll="true" primaryKey="MAIN_KEY">
+        <Table name="ANS_CHANNEL_PLAYOUT">
+        </Table>
+        <Level name="&#31680;&#30446;&#21517;&#31281;" visible="true" column="TITLE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="P_HOUR" highCardinality="false" name="&#24190;&#40670;">
+      <Hierarchy name="&#24190;&#40670;" visible="true" hasAll="true">
+        <Table name="ANS_CDN_HOUR_REPORT" schema="PENTAHO">
+        </Table>
+        <Level name="&#24190;&#40670;" visible="true" column="P_HOUR" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Volume MB" column="VOLUME_MB" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="&#25773;&#25918;&#27425;&#25976;" column="ACCESS_COUNT" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="Bitrate max" column="BITRATE_MAX" formatString="#" aggregator="sum">
+    </Measure>
+    <Measure name="&#35264;&#30475;&#20998;&#37912;&#25976;" column="TOTAL_WATCH_TIME" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="&#35264;&#30475;&#26178;&#25976;" column="TOTAL_WATCH_TIME_HOURS" formatString="#,###.####;(#,###.####)" aggregator="sum">
+    </Measure>
+    <CalculatedMember name="&#24179;&#22343;&#26178;&#38291;" formatString="#,###.##;(#,###.##)" formula="[Measures].[&#35264;&#30475;&#20998;&#37912;&#25976;]/[Measures].[&#25773;&#25918;&#27425;&#25976;]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Volume GB" formatString="#,###.##GB;(#,###.##GB)" dimension="Measures" visible="true">
+      <Formula>
+        <![CDATA[[Measures].[Volume MB] / 1024]]>
+      </Formula>
+    </CalculatedMember>
+  </Cube>
+  <Cube name="&#24291;&#21578;&#27969;&#37327;&#36039;&#26009;" visible="true" cache="true" enabled="true">
+    <Table name="VIDEO_AD_LOG_CNT" schema="IPTV">
+    </Table>
+    <DimensionUsage source="&#26178;&#38291;" name="&#26178;&#38291;" visible="true" foreignKey="P_DATE_S" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="false" foreignKey="AD_ID" highCardinality="false" name="&#24291;&#21578;&#31278;&#39006;ID">
+      <Hierarchy name="&#24291;&#21578;&#31278;&#39006;ID" visible="true" hasAll="true" primaryKey="AD_ID">
+        <Table name="ANS_AD_ID_MAS" schema="PENTAHO">
+        </Table>
+        <Level name="&#24291;&#21578;&#31278;&#39006;ID" visible="true" column="AD_ID" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="CDATA_TYPE" highCardinality="false" name="cdata">
+      <Hierarchy name="cdata" visible="true" hasAll="true" primaryKey="CDATA_TYPE">
+        <Table name="ANS_CDATATYPE_MAS" schema="PENTAHO">
+        </Table>
+        <Level name="cdata" visible="true" column="CDATA_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Platform" name="Platform" visible="true" foreignKey="PLATFORM" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24291;&#21578;" name="&#24291;&#21578;" visible="true" foreignKey="AD_CLIP" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#20998;&#26512;" name="&#20998;&#26512;" visible="true" foreignKey="ANS_CODE1" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24433;&#29255;" name="&#24433;&#29255;" visible="true" foreignKey="PROGRAM_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24433;&#29255;&#31278;&#39006;" name="&#24433;&#29255;&#31278;&#39006;" visible="true" foreignKey="CONTENT_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="&#25976;&#37327;" column="CNT" datatype="Numeric" formatString="#,###;(#,###)" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="&#26283;&#20572;&#24291;&#21578;&#26333;&#20809;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_p_b],[cdata].[ads-start])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="&#26283;&#20572;&#24291;&#21578;&#40670;&#38321;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_p_b],[cdata].[ads-click])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Logo&#24291;&#21578;&#26333;&#20809;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_logo],[cdata].[ads-start])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Logo&#24291;&#21578;&#40670;&#38321;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_logo],[cdata].[ads-click])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="&#24433;&#38899;&#24291;&#21578;Request" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad-video],[cdata].[request])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="&#24433;&#38899;&#24291;&#21578;impression" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad-video],[cdata].[impression])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="&#24433;&#38899;&#24291;&#21578;Server" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad-video],[cdata].[serve])" dimension="Measures" visible="false">
+    </CalculatedMember>
+    <CalculatedMember name="&#24433;&#38899;&#24291;&#21578;NoAd" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad-video],[cdata].[noAd])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Endbanner&#24291;&#21578;&#26333;&#20809;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[endbanner],[cdata].[ads-start])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Endbanner&#24291;&#21578;&#40670;&#38321;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[endbanner],[cdata].[ads-click])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="NoAd&#24291;&#21578;&#26333;&#20809;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_noad],[cdata].[ads-start])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="NoAd&#24291;&#21578;&#40670;&#38321;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_noad],[cdata].[ads-click])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="&#24433;&#38899;&#24291;&#21578;AdBlock" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad-video],[cdata].[blocked])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PrerollAd&#24291;&#21578;&#26333;&#20809;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_pre_b],[cdata].[ads-start])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PrerollAd&#24291;&#21578;&#40670;&#38321;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_pre_b],[cdata].[ads-click])" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="CDN&#27969;&#37327;&#22577;&#34920;ALL" visible="true" cache="true" enabled="true">
+    <Table name="ANS_CDN_DAILY_REPORT_ALL" schema="PENTAHO">
+    </Table>
+    <DimensionUsage source="&#24433;&#29255;" name="&#24433;&#29255;" visible="true" foreignKey="PROGRAM_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26178;&#38291;" name="&#26178;&#38291;" visible="true" foreignKey="P_DATE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#20998;&#26512;" name="&#20998;&#26512;" visible="false" foreignKey="CONTENT_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="CDN&#26381;&#21209;&#21517;&#31281;" name="CDN&#26381;&#21209;&#21517;&#31281;" visible="true" foreignKey="SERVICE_NAME" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#27969;&#37327;" name="EM&#27969;&#37327;&#22823;&#23567;" visible="true" foreignKey="PROGRAM_SIZE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#20998;&#26512;" name="&#24291;&#21578;" visible="true" foreignKey="CONTENT_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="ANA_CODE1" highCardinality="false" name="&#20998;&#39006;">
+      <Hierarchy name="TOP20" visible="true" hasAll="true" primaryKey="ANA_CODE1">
+        <Table name="ANS_CDN_ANA_CODE">
+        </Table>
+        <Level name="TOP20" visible="true" column="DESCRIPTION" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="SERVICE_NAME" highCardinality="false" name="Platform">
+      <Hierarchy name="Platform" visible="true" hasAll="true" primaryKey="SERVICE_NAME">
+        <Table name="ANS_CDN_SERVICE_NAME">
+        </Table>
+        <Level name="Platform" visible="true" column="PLATFORM" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="CDN_PROVIDER" highCardinality="false" name="CDN&#24288;&#21830;">
+      <Hierarchy name="CDN&#24288;&#21830;" visible="true" hasAll="true">
+        <Table name="ANS_CDN_DAILY_REPORT_ALL" schema="PENTAHO">
+        </Table>
+        <Level name="CDN&#24288;&#21830;" visible="true" column="CDN_PROVIDER" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="TOP20" name="TOP20" visible="true" foreignKey="ANA_CODE1" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="PROGRAM_ID" highCardinality="false" name="CO Headend Set">
+      <Hierarchy name="CDN Code" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="CDN Code" visible="true" column="HEADENDSTATIONID" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#38971;&#36947;&#21517;&#31281;" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="&#38971;&#36947;&#21517;&#31281;" visible="true" column="HEADENDSTATIONNAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#38971;&#36947;&#34399;&#30908;" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="&#38971;&#36947;&#34399;&#30908;" visible="true" column="TUNNG_CHANNEL" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="&#38971;&#36947;&#20998;&#39006;" visible="true" hasAll="true" primaryKey="HEADENDSTATIONID">
+        <Table name="CMS_CHANNEL_HEADEND" schema="PENTAHO">
+        </Table>
+        <Level name="&#38971;&#36947;&#20998;&#39006;" visible="true" column="CATEGORY_ZHTW" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Volume MB" column="VOLUME_MB" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="&#25773;&#25918;&#27425;&#25976;" column="ACCESS_COUNT" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="Bitrate max" column="BITRATE_MAX" formatString="#" aggregator="sum">
+    </Measure>
+    <Measure name="&#35264;&#30475;&#20998;&#37912;&#25976;" column="TOTAL_WATCH_TIME" formatString="#,###;(#,###)" aggregator="sum">
+    </Measure>
+    <Measure name="&#35264;&#30475;&#26178;&#25976;" column="TOTAL_WATCH_TIME_HOURS" formatString="#,###.####;(#,###.####)" aggregator="sum">
+    </Measure>
+  </Cube>
+  <VirtualCube enabled="true" name="&#24291;&#21578;&#27969;&#37327;&#21295;&#32317;&#36039;&#26009;" visible="true">
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Platform">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="&#24291;&#21578;&#27969;&#37327;&#36039;&#26009;" visible="true" highCardinality="false" name="&#24291;&#21578;&#31278;&#39006;ID">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="&#24291;&#21578;&#27969;&#37327;&#36039;&#26009;" visible="true" highCardinality="false" name="cdata">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="&#26178;&#38291;">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="&#24433;&#29255;">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="&#20998;&#26512;">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="&#24291;&#21578;">
+    </VirtualCubeDimension>
+    <VirtualCubeMeasure cubeName="CDN &#27969;&#37327;&#22577;&#34920;" name="[Measures].[&#25773;&#25918;&#27425;&#25976;]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="CDN &#27969;&#37327;&#22577;&#34920;" name="[Measures].[&#35264;&#30475;&#20998;&#37912;&#25976;]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="CDN &#27969;&#37327;&#22577;&#34920;" name="[Measures].[&#35264;&#30475;&#26178;&#25976;]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="&#24291;&#21578;&#27969;&#37327;&#36039;&#26009;" name="[Measures].[&#25976;&#37327;]" visible="true">
+    </VirtualCubeMeasure>
+    <CalculatedMember name="&#26283;&#20572;&#24291;&#21578;&#26333;&#20809;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_p_b],[cdata].[ads-start])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="&#26283;&#20572;&#24291;&#21578;&#40670;&#38321;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_p_b],[cdata].[ads-click])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="&#24433;&#38899;&#24291;&#21578;Request&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad-video],[cdata].[request])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="&#24433;&#38899;&#24291;&#21578;Impression" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad-video],[cdata].[impression])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="&#24433;&#38899;&#24291;&#21578;Serve" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad-video],[cdata].[serve])" dimension="Measures" visible="false">
+    </CalculatedMember>
+    <CalculatedMember name="&#24433;&#38899;&#24291;&#21578;noAd" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad-video],[cdata].[noAd])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="logo&#24291;&#21578;&#26333;&#20809;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_logo],[cdata].[ads-start])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="logo&#24291;&#21578;&#40670;&#38321;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_logo],[cdata].[ads-click])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="NoAd&#24291;&#21578;&#26333;&#20809;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_noad],[cdata].[ads-start])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="NoAd&#24291;&#21578;&#40670;&#38321;&#25976;" formula="([Measures].[&#25976;&#37327;],[&#24291;&#21578;&#31278;&#39006;ID].[ad_noad],[cdata].[ads-click])" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </VirtualCube>
+</Schema>

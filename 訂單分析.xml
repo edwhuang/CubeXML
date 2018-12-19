@@ -1,0 +1,396 @@
+<Schema name="&#27599;&#26376;&#35330;&#21934;&#20998;&#26512;">
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="&#24180;&#24230;&#26376;&#20221;">
+    <Hierarchy name="&#24180;&#26376;" visible="true" hasAll="true" primaryKey="P_YYYY_MM">
+      <Table name="CALENLDER_MONTHS" schema="PENTAHO">
+      </Table>
+      <Level name="&#24180;&#24230;" visible="true" column="P_YEAR" ordinalColumn="P_YEAR" type="String" uniqueMembers="true" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+      <Level name="&#26376;&#20221;" visible="true" column="P_YYYY_MM" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#26376;&#20221;" visible="true" hasAll="true" primaryKey="P_YYYY_MM">
+      <Table name="CALENLDER_MONTHS" schema="PENTAHO">
+      </Table>
+      <Level name="&#26376;&#20221;" visible="true" column="P_MONTHS" type="String" uniqueMembers="true" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#26041;&#26696;">
+    <Hierarchy name="&#36092;&#36023;&#26041;&#26696;" visible="true" hasAll="true" primaryKey="PACKAGE_ID">
+      <Table name="ANS_PACKAGE_MAS" schema="PENTAHO">
+      </Table>
+      <Level name="&#22871;&#39184;&#21517;&#31281;" visible="true" column="PACKAGE_CAT1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#26041;&#26696;&#21517;&#31281;" visible="true" column="DESCRIPTION" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Property name="&#31995;&#32113;&#31278;&#39006;" column="SYSTEM_TYPE" type="String">
+        </Property>
+      </Level>
+      <Level name="&#26041;&#26696;&#20195;&#34399;" visible="true" column="PACKAGE_ID" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#26041;&#26696;&#21517;&#31281;" visible="true" hasAll="true" primaryKey="PACKAGE_ID">
+      <Table name="ANS_PACKAGE_MAS">
+      </Table>
+      <Level name="&#26041;&#26696;&#21517;&#31281;" visible="true" column="DESCRIPTION" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#26041;&#26696;&#39006;&#22411;" visible="true" hasAll="true" primaryKey="PACKAGE_ID">
+      <Table name="ANS_PACKAGE_MAS">
+      </Table>
+      <Level name="&#26041;&#26696;&#39006;&#22411;" visible="true" column="SYSTEM_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#24115;&#34399;">
+    <Hierarchy name="&#24615;&#21029;" visible="true" hasAll="true" primaryKey="ACCOUNT_ID">
+      <Table name="ACCOUNT_INFO" schema="PENTAHO">
+      </Table>
+      <Level name="&#24615;&#21029;" visible="true" column="SEX" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#24180;&#40801;" visible="true" hasAll="true" primaryKey="ACCOUNT_ID">
+      <Table name="ACCOUNT_INFO" schema="PENTAHO">
+      </Table>
+      <Level name="&#24180;&#40801;&#23652;" visible="true" column="AGE_RANG" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#24115;&#34399;&#35373;&#23450;" visible="true" hasAll="true" primaryKey="ACCOUNT_ID">
+      <Table name="ACCOUNT_INFO" schema="PENTAHO">
+      </Table>
+      <Level name="Phone" visible="true" column="PHONE_NO" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Email" visible="true" column="EMAIL" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#24115;&#34399;&#32676;&#32068;" visible="true" hasAll="true" primaryKey="ACCOUNT_ID">
+      <Table name="ANS_ACCOUNT_PROJECT_V">
+      </Table>
+      <Level name="&#24115;&#34399;&#38283;&#36890;&#24179;&#21488;" visible="true" column="PRODUCT_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#21697;&#29260;" visible="true" column="BRAND" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#23560;&#26696;&#35498;&#26126;" visible="true" column="DESCRIPTION" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#32676;&#32068;" visible="true" column="SOFTWARE_GROUP" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#24115;&#34399;&#29256;&#26412;" visible="true" hasAll="true" primaryKey="CLIENT_ID">
+      <Table name="ANS_CLIENT_DEVICE_DETAIL">
+      </Table>
+      <Level name="&#24115;&#34399;&#29256;&#26412;" visible="true" column="VER" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#20998;&#25104;&#23565;&#35937;" visible="true" hasAll="true" primaryKey="ACCOUNT_ID">
+      <Table name="ACCOUNT_INFO">
+      </Table>
+      <Level name="&#21512;&#20316;&#24288;&#21830;" visible="true" column="REFERRINGPARTNER" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#36092;&#36023;" visible="true" hasAll="true" primaryKey="CLIENT_ID">
+      <Table name="ANS_PURCHASE_DETAIL" alias="ACC_PUR">
+      </Table>
+      <Level name="&#20812;&#25563;&#26041;&#26696;&#20195;&#34399;" visible="true" column="COUPON_PRG_ID" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#21040;&#26399;&#24115;&#25142;" visible="true" hasAll="true" primaryKey="CLIENTS">
+      <Table name="ANS_ACCOUNT_STOP_SERVICE">
+      </Table>
+      <Level name="&#21040;&#26399;&#24180;&#26376;" visible="true" column="P_YYYY_MM" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#22871;&#39184;&#21029;" visible="true" column="PACKAGE_CAT1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="IfParentsName">
+      </Level>
+      <Level name="&#26041;&#26696;" visible="true" column="PACKAGE_NAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#20184;&#27454;&#26041;&#24335;" visible="true" column="PAY_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#26032;&#22686;&#24115;&#25142;" visible="true" hasAll="true" primaryKey="CLIENT_ID">
+      <Table name="ANS_ACCOUNT_START_SERVICE">
+      </Table>
+      <Level name="&#36092;&#36023;&#24180;&#26376;" visible="true" column="P_YYYYMM" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#22871;&#39184;&#21029;" visible="true" column="PACKAGE_CAT1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#26041;&#26696;" visible="true" column="PACKAGE_NAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#20184;&#27454;&#26041;&#24335;" visible="true" column="PAY_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="&#26178;&#38291;">
+    <Hierarchy name="&#24180;&#26376;&#26085;" visible="true" hasAll="true" allMemberName="All Days" primaryKey="P_DATE_S">
+      <Table name="CALENDER">
+      </Table>
+      <Level name="&#24180;&#24230;" visible="true" column="P_YEAR" type="Integer" uniqueMembers="true" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+      <Level name="&#26376;&#20221;" visible="true" column="P_YYYYMM" type="String" uniqueMembers="true" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+      <Level name="&#26085;" visible="true" column="P_DATE_S" type="String" uniqueMembers="true" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#24180;&#24230;" visible="true" hasAll="true" primaryKey="P_DATE_S">
+      <Table name="CALENDER">
+      </Table>
+      <Level name="&#24180;&#24230;" visible="true" column="P_YEAR" type="String" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#26376;&#20221;" visible="true" hasAll="true" primaryKey="P_DATE_S">
+      <Table name="CALENDER">
+      </Table>
+      <Level name="&#26376;&#20221;" visible="true" column="P_MONTH" type="String" uniqueMembers="true" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#26085;&#26399;" visible="true" hasAll="true" primaryKey="P_DATE_S">
+      <Table name="CALENDER">
+      </Table>
+      <Level name="&#26085;&#26399;" visible="true" column="P_DATE_S" type="String" uniqueMembers="true" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#26143;&#26399;" visible="true" hasAll="true" primaryKey="P_DATE_S">
+      <Table name="CALENDER">
+      </Table>
+      <Level name="&#26143;&#26399;" visible="true" column="P_WEEK" type="String" uniqueMembers="true" levelType="TimeWeeks" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#36092;&#36023;">
+    <Hierarchy name="&#20184;&#27454;&#26041;&#24335;" visible="true" hasAll="true" primaryKey="PAY_TYPE">
+      <Table name="ANS_PAYMENT_MAS" schema="PENTAHO">
+      </Table>
+      <Level name="&#31278;&#39006;" visible="true" column="PAY_TYPE_GROUP" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#20184;&#27454;&#26041;&#24335;" visible="true" column="PAY_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Softeaware">
+    <Hierarchy name="Software" visible="true" hasAll="true" primaryKey="PROJECT_CODE">
+      <Table name="ANS_PROJECT_MAS" schema="PENTAHO">
+      </Table>
+      <Level name="&#21697;&#29260;" visible="true" column="BRAND" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Type" visible="true" column="PRODUCT_TYPE" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Software Group" visible="true" column="DESCRIPTION" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Proect" visible="true" column="PROJECT_CODE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#20358;&#28304;">
+    <Hierarchy name="UTM_Campain" visible="true" hasAll="true" primaryKey="SRC_NO">
+      <View alias="PAYMETHOD_TYPE">
+        <SQL dialect="oracle">
+          <![CDATA[SELECT a.src_no,a1.UTM_CAMPAIGN FROM PENTAHO.ANS_PURCHASE_DETAIL a
+,PENTAHO.ANS_PURCHASE_EXTRA a1
+where a.SRC_NO=a1.SESSION_UID (+)]]>
+        </SQL>
+      </View>
+      <Level name="Campain" visible="true" column="UTM_CAMPAIGN" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="UTM_Source" visible="true" hasAll="true" primaryKey="SRC_NO">
+      <View alias="UTM_SOURCE">
+        <SQL dialect="oracle">
+          <![CDATA[SELECT a.src_no,a1.UTM_SOURCE FROM PENTAHO.ANS_PURCHASE_DETAIL a
+,PENTAHO.ANS_PURCHASE_EXTRA a1
+where a.SRC_NO=a1.SESSION_UID (+)]]>
+        </SQL>
+      </View>
+      <Level name="UTM_SOURCE" visible="true" column="UTM_SOURCE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="&#35330;&#21934;">
+    <Hierarchy name="&#35330;&#21934;&#32232;&#34399;" visible="true" hasAll="true" primaryKey="PURCHASE_NO">
+      <Table name="ANS_PURCHASE_DETAIL">
+      </Table>
+      <Level name="&#39318;&#27425;&#36092;&#36023;" visible="true" column="FIRST_BUY" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#35330;&#21934;&#32232;&#34399;" visible="true" column="PURCHASE_NO" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="&#33258;&#21205;&#25187;&#27454;" visible="true" hasAll="true" primaryKey="PURCHASE_NO">
+      <Table name="V_RECURRENT_MAS">
+      </Table>
+      <Level name="&#33258;&#21205;&#25187;&#27454;" visible="true" column="RECURRENT_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#20572;&#25187;&#21407;&#22240;" visible="true" column="STOP_TYPE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="&#20572;&#25187;&#20633;&#35387;" visible="true" column="REMARK" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="&#27599;&#26376;&#26377;&#25928;&#29992;&#25142;&#20998;&#26512;" visible="true" cache="true" enabled="true">
+    <Table name="ANS_PURCHASE_MONTHS" schema="PENTAHO">
+    </Table>
+    <DimensionUsage source="&#24180;&#24230;&#26376;&#20221;" name="&#24180;&#24230;&#26376;&#20221;" visible="true" foreignKey="P_YYYY_MM" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26041;&#26696;" name="&#26041;&#26696;" visible="true" foreignKey="PACKAGE_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24115;&#34399;" name="&#24115;&#34399;" visible="true" foreignKey="CLIENTS" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#36092;&#36023;" name="&#36092;&#36023;&#26041;&#24335;" visible="true" foreignKey="PAY_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#35330;&#21934;" name="&#35330;&#21934;" visible="true" foreignKey="PURCHASE_IDS" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="&#26381;&#21209;&#26377;&#25928;&#29992;&#25142;&#25976;" column="CLIENTS" formatString="#,###;(#,###)" aggregator="distinct count">
+    </Measure>
+    <Measure name="&#26381;&#21209;&#26377;&#25928;&#35330;&#21934;&#25976;" column="PURCHASE_IDS" formatString="#,###;(#,###)" aggregator="distinct count">
+    </Measure>
+    <Measure name="&#26032;&#22686;&#35330;&#36092;&#35330;&#21934;&#25976;" column="START_PURCHASE_IDS" formatString="#,###;(#,###)" aggregator="distinct count">
+    </Measure>
+    <Measure name="&#35330;&#36092;&#21040;&#26399;&#35330;&#21934;&#25976;" column="END_PURCHASE_IDS" formatString="#,###;(#,###)" aggregator="distinct count">
+    </Measure>
+    <Measure name="&#26032;&#22686;&#35330;&#36092;&#29992;&#25142;&#25976;" column="START_CLIENT_IDS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="&#35330;&#36092;&#21040;&#26399;&#29992;&#25142;&#25976;" column="END_CLIENT_IDS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="&#39318;&#27425;&#35330;&#36092;&#29992;&#25142;&#25976;" column="FIRST_S_CLIENT_IDS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="false">
+    </Measure>
+    <Measure name="&#26032;&#36104;&#29992;&#25142;&#25976;" column="NEW_S_CLIENT_IDS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="false">
+    </Measure>
+    <Measure name="&#26381;&#21209;&#20572;&#27490;&#29992;&#25142;&#25976;" column="STOP_S_CLIENT_IDS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="false">
+    </Measure>
+    <Measure name="&#20572;&#27490;&#35330;&#36092;&#29992;&#25142;&#25976;" column="END_S_CLIENT_IDS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="false">
+    </Measure>
+  </Cube>
+  <Cube name="&#27599;&#26085;&#26377;&#25928;&#29992;&#25142;&#20998;&#26512;" visible="false" cache="true" enabled="true">
+    <Table name="ANS_PURCHASE_DAILY" schema="PENTAHO">
+    </Table>
+    <DimensionUsage source="&#26178;&#38291;" name="&#26399;&#38291;" visible="true" foreignKey="P_DATE_S" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26041;&#26696;" name="&#26041;&#26696;" visible="true" foreignKey="PACKAGE_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24115;&#34399;" name="&#24115;&#34399;" visible="true" foreignKey="CLIENTS" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#36092;&#36023;" name="&#36092;&#36023;&#26041;&#24335;" visible="true" foreignKey="PAY_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="PURCHASE_IDS" highCardinality="false" name="&#35330;&#21934;&#32232;&#34399;">
+      <Hierarchy name="&#35330;&#21934;&#32232;&#34399;" visible="true" hasAll="true">
+        <Table name="ANS_PURCHASE_DAILY" schema="PENTAHO">
+        </Table>
+        <Level name="&#35330;&#21934;&#32232;&#34399;" visible="true" column="PURCHASE_IDS" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="START_CLIENT_IDS" highCardinality="false" name="&#26032;&#22686;&#35330;&#21934;&#32232;&#34399;">
+      <Hierarchy name="&#26032;&#22686;&#35330;&#21934;&#32232;&#34399;" visible="true" hasAll="true" primaryKey="START_PURCHASE_IDS">
+        <Table name="ANS_PURCHASE_DAILY" schema="PENTAHO">
+        </Table>
+        <Level name="&#26032;&#22686;&#35330;&#21934;&#32232;&#34399;" visible="true" column="START_PURCHASE_IDS" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="END_PURCHASE_IDS" highCardinality="false" name="&#21040;&#26399;&#35330;&#21934;&#32232;&#34399;">
+      <Hierarchy name="&#36947;&#22855;&#35330;&#21934;&#32232;&#34399;" visible="true" hasAll="true" primaryKey="END_PURCHASE_IDS">
+        <Table name="ANS_PURCHASE_DAILY" schema="PENTAHO">
+        </Table>
+        <Level name="&#21040;&#26399;&#35330;&#21934;&#32232;&#34399;" visible="true" column="END_PURCHASE_IDS" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="&#26032;&#22686;&#29992;&#25142;&#25976;" column="START_CLIENT_IDS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="&#26377;&#25928;&#29992;&#25142;&#25976;" column="CLIENTS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="&#21040;&#26399;&#29992;&#25142;&#25976;" column="END_CLIENT_IDS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="&#26032;&#22686;&#35330;&#21934;&#25976;" column="START_PURCHASE_IDS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="&#26377;&#25928;&#35330;&#21934;&#25976;" column="PURCHASE_IDS" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="&#21040;&#26399;&#35330;&#21934;&#25976;" column="END_PURCHASE_IDS" formatString="#,###;(#,###)" aggregator="distinct-count" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="&#27599;&#26085;&#35330;&#36092;&#29992;&#25142;&#20998;&#26512;" visible="true" cache="true" enabled="true">
+    <Table name="ANS_PURCHASE_DETAIL">
+    </Table>
+    <DimensionUsage source="&#26178;&#38291;" name="&#36092;&#36023;&#26178;&#38291;" visible="true" foreignKey="PURCHASE_DATE_S" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26041;&#26696;" name="&#26041;&#26696;" visible="true" foreignKey="PACKAGE_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24115;&#34399;" name="&#24115;&#34399;" visible="true" foreignKey="CLIENT_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#36092;&#36023;" name="&#36092;&#36023;" visible="true" foreignKey="PAY_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Softeaware" name="&#20358;&#28304;&#24179;&#21488;" visible="true" foreignKey="SOFTWARE_GROUP" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#20358;&#28304;" name="&#35330;&#21934;&#20358;&#28304;" visible="true" foreignKey="SRC_NO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#35330;&#21934;" name="&#35330;&#21934;&#32232;&#34399;" visible="true" foreignKey="PURCHASE_NO" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="SERVICE_DAYS" highCardinality="false" name="&#26381;&#21209;&#22825;&#25976;">
+      <Hierarchy name="&#26381;&#21209;&#22825;&#25976;" visible="true" hasAll="true">
+        <Table name="ANS_PURCHASE_DETAIL">
+        </Table>
+        <Level name="&#26381;&#21209;&#22825;&#25976;" visible="true" column="SERVICE_DAYS" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="&#35330;&#21934;&#25976;&#37327;" column="PURCHASE_NO" formatString="#,###;(#,###)" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="&#35330;&#36092;&#29992;&#25142;&#25976;" column="CLIENT_ID" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="&#35330;&#21934;&#37329;&#38989;" column="AMT" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="&#31237;&#38989;" column="TAX_AMT" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="&#28136;&#38989;" column="NET_AMT" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="&#27599;&#26085;&#38283;&#36890;&#29992;&#25142;&#20998;&#26512;" visible="true" cache="true" enabled="true">
+    <Table name="ANS_CLIENT_DEVICE_DETAIL">
+    </Table>
+    <DimensionUsage source="&#24115;&#34399;" name="&#24115;&#34399;" visible="true" foreignKey="CLIENT_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26178;&#38291;" name="&#24115;&#34399;&#38283;&#36890;&#26085;" visible="true" foreignKey="ACC_ACTIVATE_DATE" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="&#29992;&#25142;&#25976;" column="CLIENT_ID" aggregator="distinct-count" visible="true">
+    </Measure>
+    <CalculatedMember name="&#32047;&#35336;&#24115;&#25142;&#38283;&#36890;&#25976;" formula="Aggregate({[&#24115;&#34399;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].[2014]:ParallelPeriod([&#24115;&#34399;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].[&#24180;&#24230;], IIf([&#24115;&#34399;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].CurrentMember=Ancestor([&#24115;&#34399;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].CurrentMember,[&#24115;&#34399;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].[&#24180;&#24230;]),0,1),Ancestor([&#24115;&#34399;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].CurrentMember,[&#24115;&#34399;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].[&#24180;&#24230;])),PeriodsToDate([&#24115;&#34399;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].[&#24180;&#24230;],[&#24115;&#34399;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;]. CurrentMember)}, [Measures].[&#29992;&#25142;&#25976;])" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="&#27599;&#26085;&#38283;&#36890;&#35037;&#32622;&#20998;&#26512;" visible="true" cache="true" enabled="true">
+    <Table name="ANS_CLIENT_DEVICE_DETAIL">
+    </Table>
+    <DimensionUsage source="&#26178;&#38291;" name="&#35037;&#32622;&#38283;&#36890;&#26085;" visible="true" foreignKey="ACTIVATE_DATE_S" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24115;&#34399;" name="&#24115;&#34399;" visible="true" foreignKey="CLIENT_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Softeaware" name="&#36575;&#39636;&#32676;&#32068;" visible="true" foreignKey="SOFTWARE_GROUP" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Device&#25976;" column="DEVICE_ID" aggregator="distinct-count" visible="true">
+    </Measure>
+    <CalculatedMember name="&#32047;&#35336;Device&#25976;" formula="Aggregate({[&#35037;&#32622;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].[2014]:ParallelPeriod([&#35037;&#32622;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].[&#24180;&#24230;], IIf([&#35037;&#32622;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].CurrentMember=Ancestor([&#35037;&#32622;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].CurrentMember,[&#35037;&#32622;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].[&#24180;&#24230;]),0,1),Ancestor([&#35037;&#32622;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].CurrentMember,[&#35037;&#32622;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].[&#24180;&#24230;])),PeriodsToDate([&#35037;&#32622;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;].[&#24180;&#24230;],[&#35037;&#32622;&#38283;&#36890;&#26085;.&#24180;&#26376;&#26085;]. CurrentMember)}, [Measures].[Device&#25976;])" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="&#27599;&#26085;&#27963;&#36493;&#35037;&#32622;&#25976;" visible="false" cache="true" enabled="true">
+    <Table name="ANS_TV_LOG">
+    </Table>
+    <DimensionUsage source="Softeaware" name="Software_Group" visible="true" foreignKey="SOFTWARE_GROUP" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26178;&#38291;" name="&#26085;&#26399;" visible="true" foreignKey="ACT_DATE" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="&#35037;&#32622;&#25976;" column="DEVICE_ID" aggregator="distinct-count" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="&#27599;&#26376;&#29151;&#25910;&#20998;&#26512;" visible="true" cache="true" enabled="true">
+    <Table name="ANS_PURCHASE_MONTHS_REV">
+    </Table>
+    <DimensionUsage source="&#24180;&#24230;&#26376;&#20221;" name="&#24180;&#24230;&#26376;&#20221;" visible="true" foreignKey="PERIOD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#26041;&#26696;" name="&#26041;&#26696;" visible="true" foreignKey="PACKAGE_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#24115;&#34399;" name="&#24115;&#34399;" visible="true" foreignKey="CLIENT_ID" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#36092;&#36023;" name="&#20184;&#27454;&#26041;&#24335;" visible="true" foreignKey="PAY_TYPE" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="&#35330;&#21934;" name="&#35330;&#21934;" visible="true" foreignKey="PURCHASE_NO" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="&#26412;&#26399;&#38928;&#25910;" column="INCOME" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="&#26412;&#26399;&#29151;&#25910;" column="REVENUE" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
